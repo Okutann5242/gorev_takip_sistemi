@@ -12,14 +12,14 @@ git branch
 
 Yeni Branch Oluşturma ve Geçiş Yapma:
 git checkout -b isim-gorev-adi
-# Örnek: git checkout -b arda-navbar-tasarimi
+# Örnek: git checkout -b Berat-navbar-tasarimi
 
 Farklı Bir Branch'e Geçiş Yapma:
 git checkout branch-adi
 
 1. Yeni Bir Göreve Başlarken:
 git checkout -b isim-gorev-adi
-# Örnek: git checkout -b hasan-login-formu
+# Örnek: git checkout -b Nur-login-formu
 
 2. Kodları Kaydetme ve Gönderme
 git add .
