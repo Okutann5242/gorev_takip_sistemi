@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+#Güncelleme
 def login_view(request):
     return render(request, "accounts/login.html")
 
