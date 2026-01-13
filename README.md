@@ -1,36 +1,49 @@
-Kurulum Kılavuzu
-Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla uygulayınız.
+# Pazarcim (Django)
 
-1. Projeyi İndirin
-Terminal veya Komut İstemi'ni açarak projeyi klonlayın:
+Pazarcim; ürün kataloğu, sepet/checkout, sipariş yönetimi ve satıcı paneli içeren **e-ticaret prototipi** + satıcılara yönelik **tam içerikli eğitim modülü** içeren bir Django projesidir.
 
-git clone []
+## Özellikler
 
-🔄 Çalışma Adımları
-Mevcut Branch'leri Listeleme:
-git branch
+### E-Ticaret
+- Ürün kataloğu (arama + kategori filtre)
+- Ürün detay (görsel, stok, fiyat, yorumlar)
+- Sepet ve sipariş akışı (demo ödeme)
+- Satıcı paneli (temel): ürün ekleme ve ürün listeleme
+- Django Admin yönetimi
 
-Yeni Branch Oluşturma ve Geçiş Yapma:
-git checkout -b isim-gorev-adi
-# Örnek: git checkout -b arda-navbar-tasarimi
+### Eğitimler
+- Eğitim listesi + eğitim detay (modül/ders yapısı)
+- Kullanıcı girişine göre “eğitime kaydol” akışı
+- Admin panelinden eğitim/modül/ders yönetimi
+- **Seed komutu ile 6 eğitim / çok sayıda ders** (örnek değil, tam içerik)
 
-Farklı Bir Branch'e Geçiş Yapma:
-git checkout branch-adi
+## Kurulum
 
-1. Yeni Bir Göreve Başlarken:
-git checkout -b isim-gorev-adi
-# Örnek: git checkout -b hasan-login-formu
+Python 3.10+ önerilir.
 
-2. Kodları Kaydetme ve Gönderme
-git add .
-git commit -m "Yapılan işi özetleyen net bir mesaj yazın"
-git push origin isim-gorev-adi
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 
-3. Birleştirme (Merge) Talebi: GitHub üzerinden "Compare & Pull Request" butonuna tıklayarak Proje Liderine birleştirme isteği gönderin.
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
 
-4. Güncellemeleri Alma:
-git checkout main
-git pull origin main
-Ardından kendi dalınıza dönüp çalışmaya devam edebilirsiniz:
-git checkout kendi-dalim
-git merge main
+Uygulama: http://127.0.0.1:8000/  
+Admin: http://127.0.0.1:8000/admin/
+
+## Demo veri (opsiyonel ama önerilir)
+
+```bash
+# Demo ürün/kategori
+python manage.py seed_shop
+
+# Tam içerikli eğitim verisi
+python manage.py # seed_trainings removed - pdfs are seeded via migration
+```
+
+## Notlar
+- Ödeme ekranı demo amaçlıdır; gerçek ödeme sağlayıcı entegrasyonu yoktur.
+- Ürün görseli yüklemek için Pillow bağımlılığı kullanılır.
