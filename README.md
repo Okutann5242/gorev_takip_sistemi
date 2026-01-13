@@ -1,36 +1,22 @@
-Kurulum Kılavuzu
-Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları sırasıyla uygulayınız.
+# Grup Adı
+Pazarcım
 
-1. Projeyi İndirin
-Terminal veya Komut İstemi'ni açarak projeyi klonlayın:
+## Grup Üyeleri
+- Berat Okutan  
+- Ahmetcan Eryılmaz  
+- Sümeyye Kudu  
+- Mukaddes Nur Kuzucu  
 
-git clone []
+## Proje Adı
+Pazarcım – Django Web Sitesi
 
-🔄 Çalışma Adımları
-Mevcut Branch'leri Listeleme:
-git branch
+## Proje Amacı
+Pazarcım projesi, kullanıcıların ürünleri görüntüleyip sepete ekleyerek sipariş verebildiği;  
+satıcıların ise ürün, sipariş ve mağaza yönetimi yapabildiği bir e-ticaret web uygulamasıdır.  
+Proje Django framework’ü kullanılarak geliştirilmiştir.
 
-Yeni Branch Oluşturma ve Geçiş Yapma:
-git checkout -b isim-gorev-adi
-# Örnek: git checkout -b Berat-navbar-tasarimi
-
-Farklı Bir Branch'e Geçiş Yapma:
-git checkout branch-adi
-
-1. Yeni Bir Göreve Başlarken:
-git checkout -b isim-gorev-adi
-# Örnek: git checkout -b Nur-login-formu
-
-2. Kodları Kaydetme ve Gönderme
-git add .
-git commit -m "Yapılan işi özetleyen net bir mesaj yazın"
-git push origin isim-gorev-adi
-
-3. Birleştirme (Merge) Talebi: GitHub üzerinden "Compare & Pull Request" butonuna tıklayarak Proje Liderine birleştirme isteği gönderin.
-
-4. Güncellemeleri Alma:
-git checkout main
-git pull origin main
-Ardından kendi dalınıza dönüp çalışmaya devam edebilirsiniz:
-git checkout kendi-dalim
-git merge main
+## App Sorumlulukları
+- **Berat Okutan:** products, checkout  
+- **Ahmetcan Eryılmaz:** core  
+- **Sümeyye Kudu:** education  
+- **Mukaddes Nur Kuzucu:** accounts  
