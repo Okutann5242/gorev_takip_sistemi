@@ -13,6 +13,7 @@ from core.models import StoreProfile
 from .forms import SignUpForm, VerifyCodeForm
 from .models import UserProfile, VerificationCode
 
+#DEgisti
 
 def register(request):
     if request.user.is_authenticated:
