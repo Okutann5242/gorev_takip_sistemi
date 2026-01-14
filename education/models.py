@@ -8,7 +8,7 @@ class TrainingPDF(models.Model):
     description = models.TextField(blank=True)
     pdf = models.FileField(upload_to="education/pdfs/")
     order = models.PositiveIntegerField(default=0)
-    is_active = models.BooleanField(default=True)
+    is_activate = models.BooleanField(default=True)
 
     class Meta:
         ordering = ["order", "title"]
